@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            border:1px solid black;
+
+            /* here observe that we have not specified some height & width  */
+
+            /* now we mark it as overflow:auto then the collapse stops  */
+
+            overflow:auto;
+        }
+
+        .item{
+            width:200px;
+            height:200px;
+            margin:2px;
+            background-color: aquamarine;
+            border:1px solid black;
+            float:left;
+
+            /* so we make these items float:left then the parent collapses, i.e. the floating child elements overflow from the parent when child elements are made to float  */
+
+            /* to get rid of this collapsing we have to mark parent as overflow:auto  */
+        }
+
+        
+        #item1{
+            float: right;
+        }
+
+        #item2{
+            float: left;
+        }
+
+        #item3{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="item" id="item1">A</div>
+        <div class="item" id="item2">B</div>
+        <div class="item" id="item3">C</div>
+    </div>
+
+</body>
+</html>
+
+
+<!-- REMEBER: Do not use float for layout, only use for choti-moti positions like in index.html -->

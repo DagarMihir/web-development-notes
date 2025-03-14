@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Second Card</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet" />
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: "New Rocker", system-ui;
+		}
+
+		.container {
+			width: 100vw;
+			height: 100vh;
+			background-color: #8bc6ec;
+			background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.card {
+			width: 400px;
+			height: 560px;
+
+			background-color: white;
+			border-radius: 20px;
+			box-shadow: 1px 1px 10px black;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 25px;
+		}
+
+		.card img {
+			width: 100%;
+			height: 30%;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			margin-bottom: 10px;
+		}
+
+		.textBox {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 25px;
+			color: #151311;
+			width: 80%;
+			text-align: center;
+		}
+
+		#amountBox {
+			width: 80%;
+			height: 10%;
+			background-color: #929ae3;
+			border-radius: 10px;
+			padding: 5px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-right: 25px;
+			padding-left: 25px;
+		}
+
+		#paymentButton {
+			width: 80%;
+			height: 10%;
+			background-color: #423a80;
+			color: white;
+			border-radius: 10px;
+			box-shadow:
+				0 10px 20px rgba(0, 0, 0, 0.19),
+				0 6px 6px rgba(0, 0, 0, 0.23);
+		}
+
+		#cancelBox a {
+			text-decoration: none;
+			color: #1f1616;
+			font-weight: bold;
+			font-size: large;
+			margin-bottom: 25px;
+			transition:linear;
+			transition-duration: 0.5s;
+	}
+		#cancelBox a:hover{
+			color: #df6238;
+		}
+
+		
+		#leftBox{
+			width: fit-content;
+			display: flex;
+			gap: 15px;
+			height: 100%;
+			align-items: center;
+		}
+
+		#imageBox{
+			display: flex;
+			align-items: center;
+		}
+
+		#imageBox img{
+			height: 40px;
+			width: 40px;
+			margin-bottom: 0;
+		}
+
+		#rightBox a{
+			text-decoration: none;
+			color: black;
+			transition: linear;
+			transition-duration: 0.5s;
+		}
+
+		#rightBox a:hover{
+			color: #79216d;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<img src="./images/18752771_607.webp" alt="Angel" />
+			<div class="textBox">
+				<h2>Ticket Summary</h2>
+				<p>
+					Signing up for the best rock concert on the earth huh? Here are your
+					ticket details. Proceed with payment to get your hands on the
+					passes!
+				</p>
+			</div>
+			<div id="amountBox">
+				<div id="leftBox">
+					<div id="imageBox">
+							<img src="./images/Rammstein_logo_2.svg.png" alt="Rammstein Logo" width="10px"/>
+					</div>
+					<div id="detailBox">
+						<p>Mihir</p>	
+						<p>20 | M</p>
+					</div>
+				</div>
+				<div id="rightBox">
+					<a href="#">Change</a>
+				</div>
+			</div>
+			<button type="button" id="paymentButton">Proceed to Payment</button>
+			<div id="cancelBox">
+				<a href="#">Cancel Order</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

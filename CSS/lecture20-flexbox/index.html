@@ -1,0 +1,170 @@
+<!-- Flexbox - 1D layouting tool -->
+<!-- https://www.codehelp.in/dashboard/fruitbox-flex -->
+<!-- mark container as display:flex, then it will become a flex container and the items inside will become flex items -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: beige;
+            border: 3px solid black;
+            margin: 2px;
+            padding: 2px;
+            height: 636px;
+
+            display: flex;
+            /* whenever we mark display as flex, by defualt the direction of flex is row, this behaviour can be altered by property flex direction*/
+
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+
+            flex-wrap: wrap;
+            /* the flex items wrap and not shrink untill there is space available to wrap */
+
+            /* flex-wrap: wrap-reverse; */
+            /* flex-wrap: nowrap; */
+
+            /* A shorthand notation */
+            /* flex-flow: row wrap; */
+
+            /* justify-content: center; */
+
+            /* justify-content property is used to place stuff according to main axis, if flex-direction is row then main axis is horizontal, else if flex-direction is col then main axis is vertical  */
+            /* it centers the flex items at the center of main axis, here flex direction is row so main axis is horizontal */  
+
+            /* justify-content: end; */
+            /* justify-content: start; */
+
+            /* justify-content: space-between; */
+            /* equal space between flex items and first and last flex item is are put adjacent to the flex container */
+
+            /* justify-content: space-around; */
+            /* equal spacing applied to both sides of the flex item according to main axis */
+
+            /* justify-content: space-evenly; */
+            /* equal space all around */
+            
+            /* SIMILAR CAN BE DONE FOR FLEX DIRECTON = COLUMN */
+
+
+            /* align-items: center; */
+            /* places items according to cross axis */
+
+            /* align-items: start; */
+            /* align-items: end; */
+
+            /* align-items: stretch; */
+            /* it is defualt property for flex items, if we do not hard code values of height for the flex items then the flex items strech */
+
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+
+            /* NOW WE CAN POSITION THE FLEX ITEMS BOTH HORIZONTALLY AND VERTICALLY: */
+
+            /* justify-content: center; */
+            align-items: center;
+
+
+            /* now we observe that with wrap 'on', when the flex items wrap there is some space in between them, this can be managed usign align-content property */
+            justify-content: center;
+            align-content: end;
+
+            /* align-content overrides align-items when multiple rows exist or when flex-wrap: wrap; */
+            /* Since flex-wrap: wrap; is on, Flexbox assumes that rows can be positioned independently, align-content: end; now controls the vertical position of the row itself, overriding align-items: center; */
+
+            /* similarly other values can be given to these properties, like */
+
+            /* justify-content: start; */
+            /* align-content: center; */
+            /* align content will not work with wrap off */
+
+
+            /* NOTE - justify-items is not there for flexbox, it is used for grid */
+
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+            text-align: start;
+            color: black;
+
+            /* we have mentioned the height and width of the box , but when we shrink the viewport, the boxes shrink too, this is called responsive design */
+
+            /* to get rid of this squeezing, we have to mark flex-wrap:wrap for the container, this way the height and width of flex items stay as told, they just shift accordingly */
+
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        #box1{
+            background-color: aqua;
+
+            /* order: 4; */
+            /* order property is for flex items, it is used for changing sequence of the flex items */
+            
+            /* Now, if we turn off wrap then we observe that when we shrink the flex container the flex items too shrink, with same speed, to change this speed for a particular flex item, we use flex-shrink property for individual flex item, thus flex shrink sets how fast a flex item will shrink*/
+            /* flex-shrink: 4; */
+            /* by this, the box 1 will shrink 4x than other boxes */
+
+            /* flex-grow: 5; */
+            /* flex grow prop sets the flex grow factor, which specifies how much of the flex container's remaining space should be assigned should be assigned to the flex item's main size */
+            /* here box1 grows 5x as much other boxes grow */
+
+
+            /* A shorthand notation: flex: flex-grow flex-shrink flex-basis*/
+            /* flex: 2 2 10%; */
+            /* if flex: none then flex: 0 0 auto */
+            /* if flex: auto then flex: 1 1 auto */
+            /* if flex: 1 30px then 1 is flex growth and 30px is flex basis, flex shrink is set to 1 */
+
+
+            /* align-self: center; */
+            /* align self is used to align flex items along cross axis, it OVERIDES align-item */
+        }
+
+        #box2{
+            background-color: blue;
+
+            /* flex-grow: 1; */
+        }
+
+        #box3{
+            background-color: orange;
+            /* order: -1; */
+
+            /* flex-grow: 1; */
+        }
+
+        #box4{
+            background-color: brown;
+            
+            /* flex-grow: 1; */
+
+            /* flex-basis: 300px; */
+            /* flex basis is used to set initial main size of the flex element */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+    </div>
+
+</body>
+</html>
+

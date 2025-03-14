@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            background-color: #313131;
+        }
+
+        div{
+            border:1px solid olive;
+        }
+
+        img{
+            margin:10px;
+        }
+
+        .image1{
+            border:1px solid red;
+
+            top:100px;
+            /* no difference as by default the positioning property is set to static in which we can't set such values like top, bottom, left, right, z-index */
+        }
+
+        .image2 {
+
+            border:1px solid green;
+
+            /* here we set the position property to relative */
+            position: relative;
+
+            top: 100px;
+            /* now as you can observe, the image shifted from top by 100px */
+            /* here the image is shifting relative to the window */
+
+            /* left: 100px; */
+            /* the image shifted from left by 100px */
+
+            /* this is called RELATIVE positioning : we are positioning element wrt current window */
+            /* in this positioning we have 4 properties to position the elements : top, bottom, left, right */
+            /* also even if the element is positioned, the original space is not taken any other element i.e. a gap is maintained */
+        }
+
+        .container{
+            position: relative;
+            /* good practice to mark ancestor as relative then child as absolute */
+
+            /* to demonstrate fixed property of image5 */
+            height:3000px;
+        }
+
+        .image3{
+            position: absolute;
+            /* now the image3 is given absolute positioning property, but observe while doing this the image4 shifted to the original location of image3, this can be seen by shifting the image3 downwards, which reveals the image4 */
+
+            top:200px;
+            border:1px solid white;
+            /* thus the space of image3 is removed and all subsequent elements shift */
+
+            /* thus the image3 overlapped image4 when we used absolute positioning property, thus teh gap is not maintained in absolute positioning property */
+
+        }
+
+        .image4{
+            border:1px solid orange;
+        }
+
+        
+        .image5{
+            border:1px solid cornflowerblue;
+            position: fixed;
+
+            /* now if we put height of container some 3000px, then if we scroll the image5 stays fixed on the page */
+            /* in case of fixed to the position of fixed element gets taken away by subsequent elements, i.e. gap is not maintained, this can be oberved as image6 is overlapped by image5 */
+            /*elem is removed from the document flow and positioned realative to the viewport*/
+        }
+
+        .image6{
+            border:1px solid hotpink;
+            /* position: sticky; */
+            /* top:150px; */
+
+            /* here if we mark image6 as sticky, image6 stays in the normal flow whereas the image5 is removed from the document flow */
+        }
+
+        .image7{
+            border:1px solid greenyellow;
+            position:sticky;
+            top:0px;
+            /* we have to declare/initialize some position prop like top, otherwise the elem won't be sticky */
+
+            /* IMP: difference between sticky and fixed is that the sticky elem stays inside the parent container if you scroll, whereas the fixed elem stays fixed, even if you scroll out of the parent container of the fixed ele */
+            /* thus the sticky only shows stickyness inside its parent container */
+        }
+
+        .box{
+            background-color: dimgray;
+            height:3000px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" title="container">
+        <!-- just made a div whose class name is container-->
+
+        <img src="./image.png" title="image1" alt="image1" width="300px" class="image1" />
+        <img src="./image.png" title="image2" alt="image2" width="300px" class="image2" />
+        <img src="./image.png" title="image3" alt="image3" width="300px" class="image3" />
+        <img src="./image.png" title="image4" alt="image4" width="300px" class="image4" />
+        <img src="./image.png" title="image5" alt="image5" width="300px" class="image5" />
+        <img src="./image.png" title="image6" alt="image6" width="300px" class="image6" />
+        <img src="./image.png" title="image7" alt="image6" width="300px" class="image7" />
+
+    </div>
+
+    <div class="box">
+        
+    </div>
+</body>
+</html>

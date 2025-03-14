@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            --variable-one: 345px;
+            --variable-two: beige;
+
+            /* in such a way by puting custom variables in :root we can these variables anywhere, by any element in the DOM */
+        }
+
+        .container{
+            background-color: darkgrey;
+            height: 650px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            background-color: beige;
+            width: 330px;
+            height: 458px;
+            border: 1px solid black;  
+            margin: 5px;
+            padding: 5px;
+
+            /* box-shodow: none; */
+
+            /* box-shadow: 20px 20px rgb(11, 175, 175); */
+            /* box-shadow : x-offset y-offest color; -ve offsets for opposite directions defualt for x is right and y is down */
+
+            /* box-shadow: 10px 10px 15px ; */
+            /* box-shadow : x-offset y-offest blur-radius(+ve) color; */
+
+            /* box-shadow: 10px 10px 15px 10px rgb(11, 175, 175); */
+            /* box-shadow : x-offset y-offest blur-radius(+ve) spread-radius color; */
+            
+            /* box-shadow: inset 10px 10px 15px 10px black; */
+            /* inset to show shadow inside */
+
+            box-shadow: 10px 10px 15px rgb(11, 175, 175), 20px 20px 25px black;
+            /* two shadows can be added using comma */
+
+
+            /* Syntax to create a custom variable */
+            --primary-color: rgb(11, 175, 175);
+
+            /* similarly other attributes can also be converted to variables */
+            --custom-width: 330px;
+            
+            /* now to use these custom variables use like : var(--variable-name) */
+
+            width: var(--custom-width);
+            border: 1px solid var(--primary-color);
+
+            /* althought these variables only work inside the braces i.e. internal scope */
+            /* If we want to use such custom variables then we have to define these in :root{} */
+        }
+
+        #head1{
+            text-shadow: 2px 2px 1px rgb(104, 15, 15);
+            /* text-shadow: x-offset y-offset blur-radius color; */
+
+            /* text-shadow: rgb(104, 15, 15) 2px 3px 2px; */
+            /* color x-offset y-offset blur */
+
+            /* text-shadow: rgb(104, 15, 15) 2px 3px; */
+            /* color x-offset y-offset */
+
+            /* text-shadow: 2px 3px; */
+            /* defualt shadow color is black */
+
+            /* similar to box-shadow we can also multiple text-shadow using one statement, just comma seperated value */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="./photos-31.jpg" alt="A nice image" width="300px"/>
+            <h2 id="head1">Welcome to Paradise City</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quos reiciendis accusamus odit nihil harum atque, reprehenderit nemo corporis dolor sapiente maxime facere culpa qui?</p>
+        </div>
+    </div>
+</body>
+</html>

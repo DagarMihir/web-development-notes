@@ -1,0 +1,52 @@
+* {
+	margin: 0px;
+}
+
+body {
+	background-color: #313131;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	border: 5px solid white;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	width: 400px;
+	height: 400px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color: crimson;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* margin: auto; */
+
+	transition: all 1s ease 0s;
+}
+
+.box:hover {
+	/* transform: rotate(360deg); */
+	/* transform: scaleX(2); */
+	/* transform: scale(0.5); */
+	transform: translate(100px, 100px) rotate(-90deg) scale(0.5);
+	/* transform: skew(45deg); */
+
+	/* transform: translate(500px, 100px);  */
+	/* translate(dx, dy) +dx is towards right and +dy is towards bottom */
+
+	/*
+        Extra properties are: 1. Putting X,Y or Z at the end of translate(), scale(), and skew() help us to make the transition in these directions. 2. "transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())"- a shorthand notation
+    */
+}
+
+p {
+	font-size: 35px;
+}

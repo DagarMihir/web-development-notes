@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <style> 
+        .red{
+            background-color: coral;
+        }
+        #green{
+            background-color: green;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td{
+            background-color:lightgray;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body> <!-- class and id are global attributes, these are used to select elements or target a particular elemen -->
+    <!-- Adding styling to element is an usecase of class and id, but main task of these is to target some element. -->
+    <!-- '.' is used for class and '#' is used for id .-->
+    <p class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, totam.</p>
+    <p id="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, et?</p>
+    <h1>Test 1</h1>
+    <h3 class="red">Test 2</h3>
+
+    <!-- conventionaly id's only to be used once with any element in a page i.e to have unique id and classes can be used multiple times i.e. there may be multiple classes , but html is forgiving. Some frameworks also produce many "id's" and classes to reference partical element from memory.-->
+
+
+    <!-- iframe is used to load another webpage into your webpage or a part of it.-->
+
+    <table>
+        <tr>
+            <th>Video</th>
+            <th>Resource</th>
+        </tr>
+        <tr>
+            <td>lecture 10</td>
+            <td>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-wMbf3qVNsc?si=RjYUtjh0NYAhQHJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>lecture 9</td>
+            <td>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/I7LrS1z_WNA?si=5JNN16qA0YwcsfcC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </td>
+        </tr>
+    </table>
+
+    <!-- use of iframe can bring security concerns as that nested browsing context can add malicious stuff. thus only verfied embed links are to used as src of iframe. for more info read MDN docs -->
+</body>
+</html>

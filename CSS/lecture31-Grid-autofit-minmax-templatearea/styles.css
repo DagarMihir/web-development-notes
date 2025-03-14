@@ -1,0 +1,33 @@
+* {
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+	padding: 4rem;
+	display: grid;
+	gap: 1rem;
+	background-color: #313131;
+	/*grid-template-columns: repeat(3, 1fr);*/
+
+	grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+
+	/*auto-fit : automatically fit as many coloumns/rows that be fit on the viewport with a minmax i.e. a min widht and max widht  -- VERY POWERFUL AS IT REMOVES THE NEED FOR MEDIA QUERIES IN SOME CASES*/ 
+	/*auto-fill also available*/
+}
+
+.item {
+	border: 3px solid black;
+	background-color: #663db3;
+	color: white;
+	padding: 1rem;
+}
+

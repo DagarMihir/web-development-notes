@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input 2</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Forms in HTML</h1>
+    <form action="" method="GET" accept-charset="UTF-8" autocomplete="off" enctype=""> <!-- action = url where the bundle of info has to be submiited i.e. backend or server, method is how the data goes to server, get sends in clear text format e.g. google search and post sends in encrypted format-->
+        <label for="fname">First Name</label>
+        <input type="text" placeholder="First Name" name="" value="Mihir"id="fname"> <!-- good practice : use label tag for every input as sometimes some screen reader are not able to read placeholder-->
+        <!-- Input has many types-->
+        <br />
+        <label for="pass">Password</label>
+        <input type="password" name="" id="pass">
+        <br />
+        <lable for="week">Week</lable>
+        <input type="week" name="" id="week">
+        <br />
+
+
+        <label for="editors">Editors</label>
+        <select name="editors" id="editors">
+            <option value="vscode">vscode</option>
+            <option value="sublime">sublime</option>
+        </select>
+
+        <input list="editors" name="editor">
+        <datalist id="editors">
+            <option value="vscode">vscode</option>
+            <option value="sublime">sublime</option>
+        </datalist> <!-- datalist id = input list--> <!-- datalist not used much instead select is used-->
+
+        <br/>
+
+        <input type="hidden" name=""> <!-- to submit info to server which is not visible to user, like tokens etc .-->
+
+        <!-- types of input can be searched from MDN -->
+
+        <br />
+        <input type="reset" value="Reset" />
+        <button type="submit">Submit</button>
+    </form> <!-- form has many different types of attributes like accept-charset to tell which type character set to be accepted like spanish, hindi etc .-->
+    <!-- enctype - is text then one cannot put images in and send, is data then images can be sent -->
+</body>
+</html>

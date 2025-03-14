@@ -1,0 +1,50 @@
+<!-- Transitions - used to switch between two states for an element, whereas animation = a series of movenments or transitions -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+
+        *{
+            background-color: #414141;
+        }
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: lightsalmon;
+            border: 2px solid black;
+            /* transition-property: width; */
+            transition-property: all;
+            /* allows smooth transition to all the properties */
+            transition-duration: 1s;
+            transition-delay: 0s;
+            transition-timing-function: ease;
+
+            /* different states are defined using pseudo-classes like :hover and :active or using javascript*/
+
+            /* shorthand */
+            /* transition: all 2s ease-in-out 1s; */
+            /* property | duration | easing function | delay */
+
+            transition: width 2s, height 5s;
+        }
+
+        /* a psedo class */
+        .box:hover{
+            width: 600px;
+            background-color: lightseagreen;
+            height: 600px;
+        }
+        /* even if we don't use transitions, hover action will work but not smoothly */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>   
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin:0px;
+            background-color: #313131;
+            color: #fff;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width:300px;
+            height:300px;
+            border:1px solid orange;
+            padding:50px;
+            /* display:inline;  */
+            /* allow to convert block to inline */
+        }
+
+        span{
+            border:3px solid green;
+            width:300px;
+            height:200px;
+            margin:10px;
+            padding:10px;
+            /* display:block;  */
+            /* it allows you to convert an inline element into a block element */
+
+            display:inline-block;
+            /* allow you to set the inline to inline-block : which is when the element behaves like inline but the custom height and width can be added*/
+        }
+
+        /* span is an inline element, inline element only takes up the place of its content, tries to be in the same line(except when there is no space), width = content width, custom width and height is not applicable, however custom vertical margins are not applicable, i.e. horizontal margins and padding is applicable. 10 different inline elements are <label>, <input>, <span>, <textarea>, <button>, <img>, <em>, <br>, <a> and <select>.*/
+
+
+        /* div{
+            border:1px solid red;
+            width:300px;
+            height:300px;
+            margin:25px;
+            padding:25px;
+        } */
+
+        /* div is a block element, block element occupy full horizontal space i.e. default width is from extreme left to extreme right, they are inserted in a new line as result of beforementioned point, they respect custom height/width and margin/padding. 10 different block elements are <address>, <article>, <aside>, <dl>, <dt>, <header>, <footer>, <main>, <nav> and <ul>. */
+    </style>
+</head>
+<body>
+    
+    <!-- <div>
+        Welcome to CodeHelp
+    </div> -->
+
+    <!-- <div>
+        Welcome to CodeHelp 2.0
+    </div> -->
+
+    <div class="box">
+        Welcome to CodeHelp
+    </div>
+
+    <span>
+        This is Mihir
+    </span>
+
+    <span>
+        This is Mihir 2.0
+    </span>
+
+</body>
+</html>
+
+
+<!-- w/o border box property the box's width increase with increasing margin, padding and border, with border box these things are included in the overall width and height of the box, so if these increase the size of box remains the same just the content in the box shrinks. this property doesn't apply to border box-->

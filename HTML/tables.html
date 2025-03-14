@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #918c8c;
+        }
+    </style><!-- width: 100% -> table takes 100% of the browser width-->
+    <!-- border collapse helps collapse borders of each cell into continous borders, else all cells have there own borders.-->
+</head>
+
+<body>
+    <table> <!-- table>tr>th*3-->
+        <!-- here <table style = "width: 100% can also be used instead of using style tag in title tag."-->
+        <tr>
+            <th>Country</th>
+            <th>Country CODE</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>India</td>
+            <td>IN</td>
+            <td>india@gmial.com</td>
+        </tr>
+        <tr>
+            <td>United States of America</td>
+            <td>USA</td>
+            <td>usa@gmial.com</td>
+        </tr>
+        <tr>
+            <td>Japan</td>
+            <td>JP</td>
+            <td>jp@gmial.com</td>
+        </tr>
+        <tr>
+            <td>China</td>
+            <td>CN</td>
+            <td>cn@gmial.com</td>
+        </tr>
+    </table>
+    <br />
+    <table style="width: 50%;">
+        <tr>
+            <th colspan = "2">Country</th>
+            <td>India</td>
+            <td>China</td>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <td>IN</td>
+            <td>CN</td>
+        </tr>
+    </table>
+
+    <br />
+    <table>
+        <caption style="caption-side: bottom;">
+            Council budget (in £) 2018
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Items</th>
+                <th scope="col">Expenditure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Donuts</th>
+                <td>3,000</td>
+            </tr>
+            <tr>
+                <th scope="row">Stationery</th>
+                <td>18,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Totals</th>
+                <td>21,000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

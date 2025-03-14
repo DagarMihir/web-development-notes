@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        /*best practice : use universal selector(*) to make margin and padding = 0 and to get rid of any default margin and padding. we later make padding and margin according to our preferences.*/
+
+
+        h1 {
+            background-color: aquamarine;
+            /* border-style: solid;
+            border-width: 2px;
+            border-color: brown;     */
+
+            /*
+            shorthand notation: 
+            */
+            /* border:2px solid mediumblue; */
+
+            /* border-radius: 5px; for rounded border */
+
+            /* border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px; */
+
+            /* border-top:5px solid yellow;
+            border-bottom: 5px solid black;
+            border-right: 5px solid darkgreen;
+            border-left: 5px solid darkred; */
+
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 300px;
+            /* height:200px; */
+        }
+
+        /* span{
+            background-color: aquamarine;
+            border: 3px solid black;
+            border-radius: 5px;
+            width:300px;
+            height:200px;
+
+            
+            no effect of height or width on span tag, as it is an inline tag, this element takes space according to the content written in it.
+            
+
+        } */
+
+        .firstpara {
+            background-color: blanchedalmond;
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 300px;
+            /* height:200px; */
+
+            padding: 30px;
+            /* margin: 30px; */
+
+            /* padding-left: 10px;
+            padding-top: 20px;
+            padding-right:30px;
+            padding-bottom: 40px; */
+
+            /*shorthand: (clockwise)*/
+            /* padding: 15px 25px 35px 45px; */
+
+            /*top&botton left&right*/
+            /* padding:20px 40px; */
+
+
+            /* margin:30px; */
+            margin-top: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+
+            /* margin:50px 30px 30px 10px; */
+            /* margin: 50px 100px; */
+
+            /*thus similar shorthand notations exist for margin as padding.*/
+            
+        }
+
+        .secondpara {
+            background-color: beige;
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .thirdpara {
+            background-color: yellow;
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Welcome to Codehelp
+    </h1>
+
+    <!-- <span>
+        Welcome to Babbar's Web Dev Course
+    </span> -->
+
+    <p class="firstpara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut quaerat ad fuga iure porro
+        expedita sunt, excepturi, ea neque numquam eveniet quisquam dignissimos, eum quo. Tempora sapiente illum libero
+        doloremque quisquam modi doloribus delectus quia ratione deleniti consectetur, quae natus?</p>
+
+    <p class="secondpara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque asperiores recusandae nulla
+        beatae dolorem deleniti dignissimos atque dolor consequatur! Harum sit, optio iste eos voluptatem reprehenderit,
+        sequi illo nemo veniam nisi deserunt a iure architecto ex minus cupiditate mollitia laudantium consectetur aut
+        itaque porro similique aspernatur. Consequuntur, dolor blanditiis! Quae?</p>
+
+    <p class="thirdpara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste tempora veritatis,
+        dolores repudiandae magnam alias nam aperiam ab reprehenderit sint eum et repellendus consequuntur.</p>
+</body>
+
+</html>
+
+<!-- Every content to be rendered on the browser, renders in a rectanglar box, this is called BOX MODEL.-->
+<!-- content = actual text or image, padding = space between content and border, border, margin = some space outside border i.e. space between this element and other element.-->
+<!-- The box-sizing property allows us to include the padding and border in an element's total width and height. If you set box-sizing: border-box; on an element, padding, and border are included in the width and height.-->

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./babbar.css"> -->
+    <!-- Here it is external css .-->
+    <!-- <style>
+        p{
+            background-color: blueviolet;
+        }
+        h1{
+            color: green;
+        }
+    </style> -->
+
+    <style>
+        p{
+            color:brown;
+        }
+
+        #article1{
+            background-color: green;
+        }
+
+        .paraclass{
+            background-color: yellow;
+        }
+
+        p, article{
+            width:500px;
+        }
+
+        p.paraclass{
+            text-align: center;
+        }
+    </style>
+
+    <!-- above, p = element selecter ; #article1 = id selector (# is used for id's) ; .paraclass = class selector and p, article = group selector.-->
+    <!-- conventionally many elements cannot have same id but can have same class.-->
+</head> <!-- Internal CSS--> <!-- adding !important in from of props lets internal overwrite inline css .-->
+<!-- Internal and External compete based on position of tag whichever is lower in the code will prevail.-->
+<body>
+
+
+    <h1>Welcome to CodeHelp 2.0</h1>
+
+    <p class="paraclass">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum mollitia quidem laudantium illo amet quod dicta repellendus nihil maxime sapiente quasi, minima provident aliquid non voluptates officia aperiam! Aspernatur pariatur fugit vel magnam perspiciatis tempora, sit saepe sunt ea animi! Voluptatum temporibus, quod distinctio quos consequatur commodi autem aut.</p>
+
+    <p class="paraclass">My name is Mihir</p>
+
+    <p>My name is mihir dagar</p>
+
+    <article id="article1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ab cumque odio ullam rem dolore distinctio sunt, error fugit veniam, quo, illum porro. Provident explicabo cumque molestias iusto. Labore molestiae, qui earum vel dolorem cumque alias consequatur porro neque aspernatur laboriosam fugiat eligendi id harum sed, consequuntur aperiam delectus libero ex?</article>
+
+    <!-- <h1>Welcome to CodeHelp</h1> -->
+
+    <!-- Inline CSS, not a good practice, causes confusion-->
+
+    <!-- <p style = "background-color: yellow;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vel minima rem ipsa earum velit aut libero dolores iusto rerum.</p> --> <!-- Here inline wins the competition from internal and external. -->
+
+    <!-- <p style = "color: aqua ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eos nulla perspiciatis inventore molestias necessitatibus officia ratione placeat! Saepe temporibus unde suscipit doloribus illum, voluptas architecto eos dolorem hic corporis.</p> Here no background prop so internall css follows . -->
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut minima quisquam natus amet mollitia! Nam alias blanditiis iste voluptate similique. Corrupti nam rem totam perspiciatis consectetur est et dolores quo magnam qui recusandae, accusantium laboriosam suscipit optio cum eaque debitis, accusamus eos cupiditate delectus consequuntur alias eius illo. Illo, nam.</p> -->
+
+    <!-- <footer>I am Footer</footer> -->
+</body>
+</html>

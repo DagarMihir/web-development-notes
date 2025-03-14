@@ -1,0 +1,149 @@
+<!-- Animations - Changing styles of an element from one to another -->
+<!-- keyframes - to define 'from to' in an animation -->
+<!-- REFER MDN, W3C -->
+<!-- reading documentation is always a good practice -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*without border box property the container overflows as the border goes outsite the viewport now , due to the border box property the entire box of container fit in viewport*/
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            border: 5px solid white;
+        }
+
+        .box {
+            width: 350px;
+            height: 80px;
+            background-color: grey;
+            border: 3px solid black;
+            border-radius: 10px;
+            position: relative;
+            margin: 10px;
+
+            animation-name: rightMovement;
+            /* animaiton-name is used to set an identifier for the animation, according to these keyframes we assign keyframes */
+            animation-duration: 5s;
+            /* as the name suggests, it used to set the duration for the animation */
+            /* animation-iteration-count: 2; how many times the animation should be played */
+            /* animation-iteration-count: infinite; */
+            animation-iteration-count: 1;
+            animation-delay: 2s;
+            /* time to wait before an animation starts */
+
+            /* here it can be observed that the box starts off, gets to speed an then slows down before coming to a stop, this variation can be altered using animation-timing-function which can be used to define speed curve, i.e. the variation of speed */
+            /* the values for the timing function can be - ease, linear, ease-in, ease-out, east-in-out, cubic-bezier(n, n, n, n) */
+
+            animation-timing-function: linear;
+            /* animation-timing-function: ease-in; */
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: cubic-bezier(0.1, 0.7, 0.1, 0.6);  */
+            /* bezier curve can be used for creating custom animation speeds, the browser has a utility in inspect element pane to experiment with this */
+
+            /* animation-direction: alternate;  */
+            /* animation direction is used to define the direction of the animation, like if we want to move the box back and forth instead if it just vanishing after reaching the destination */
+            /* animation-direction: reverse; same as the default i.e. the box still vanishes but it move from the destination to sourse */
+            animation-direction: alternate-reverse;
+
+            /* NOW HOW TO DECIDE WHAT TO DO AFTER LAST FRAME AND BEFORE FIRST FRAME - USING FILL-MODE, values: none(default), forwards(the element retains the style of last keyframe(affected by direction and count)), backwards(retains the style of the first keyframe(depends on animation direction) this is also retained during animation delay), both(style of first keyframe before animation and style of last keyframe after animation*/
+            animation-fill-mode: forwards;
+
+            /* shorthand, refer MDN*/
+            animation: 5s linear 1s infinite alternate none running rightMovement;
+
+        }
+
+        #box2 {
+            width: 350px;
+            height: 80px;
+            background-color: grey;
+            margin: 10px;
+            padding: 10px;
+            border: 3px solid black;
+            border-radius: 10px;
+            position: relative;
+            animation: 5s linear 1s infinite alternate none running leftMovement;
+        }
+
+        #circle {
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+            border: 3px solid black;
+            border-radius: 50px;
+            position: relative;
+            top: 200px;
+            left: 750px;
+            animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+        }
+
+        /* keyframes are used to define source and desitination styles for an element to create an animation */
+
+        @keyframes rightMovement {
+            from {
+                top: 0px;
+                left: 10px;
+            }
+
+            to {
+                top: 0px;
+                left: 1320px;
+            }
+        }   
+
+        @keyframes leftMovement {
+            from {
+                top: 650px;
+                left: 1320px;
+            }
+
+            to {
+                top: 650px;
+                left: 10px;
+            }
+        }
+        
+        @keyframes circleMovement {
+            0%{
+                top: 1%;
+                left: 5%;
+            }
+            33%{
+                top: 50%;
+                left: 90%
+            }
+            66%{
+                top: 90%;
+                left: 10%;    
+            }
+            100%{
+                top: 30%;
+                left: 40%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div id="box2"></div>
+        <div id="circle"></div>
+    </div>
+</body>
+
+</html>

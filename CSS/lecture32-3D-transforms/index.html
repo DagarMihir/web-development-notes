@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>3D Transforms</title>
+
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body{
+				width: 100%;
+				height: 100%;
+			}
+
+			.item{
+				padding: 2rem;
+				height: 150px;
+				width: 150px;
+				border: 2px solid black;
+				background-color: #c75b54;
+			}
+
+			.container{
+				background-color: black;
+				padding: 5rem;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1rem;
+			}
+
+			#rotX:hover{
+				transform: rotateX(45deg);
+			}
+
+			#rotY:hover{
+				transform: rotateY(45deg);
+			}
+
+			#rotZ:hover{
+				transform: rotateZ(45deg);
+			}
+
+			/* -ve values for the opposite direction */
+
+			#tranX:hover{
+				transform: translateX(100px);
+			}
+
+			#tranY:hover{
+				transform: translateY(100px);
+			}
+
+			#tranZ:hover{
+				transform: perspective(300px) translateZ(100px);
+			}
+
+			#scalX:hover{
+				transform: scaleX(1.5);
+			}
+
+			#scalY:hover{
+				transform: skewX(30deg) scaleY(1.5);
+			}
+
+			#scalZ:hover{
+				transform: perspective(300px) scaleZ(2) rotateY(45deg);
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="item" id="rotX">RotateX</div>
+			<div class="item" id="rotY">RotateY</div>
+			<div class="item" id="rotZ">RotateZ</div>
+			<div class="item" id="tranX">TranslateX</div>
+			<div class="item" id="tranY">TranslateY</div>
+			<div class="item" id="tranZ">TranslateZ</div>
+			<div class="item" id="scalX">ScaleX</div>
+			<div class="item" id="scalY">ScaleY</div>
+			<div class="item" id="scalZ">ScaleZ</div>
+		</div>
+
+	</body>
+</html>

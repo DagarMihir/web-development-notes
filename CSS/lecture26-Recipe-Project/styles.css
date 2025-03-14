@@ -1,0 +1,155 @@
+body{
+    background-color: hwb(0 13% 87%);
+    font-family: "Public Sans", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /* height: 100vh; */
+    width: 100vw;
+    overflow-x: none;
+    /* background-color: hwb(0 13% 87%); */
+}
+
+
+.navContainer{
+    width: 100vw;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav{
+    width: 100%;
+}
+
+#navList{
+    list-style: none;
+    font-size: 1.2rem;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navLogo{
+    font-size: 2rem;
+    color: hsl(17, 81%, 17%);
+}
+
+#navItems{
+    display: flex;
+    gap: 15px;;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(17, 81%, 17%);
+    border: 2px solid hsl(17, 81%, 17%);
+    border-radius: 7px;
+    padding: 2px;
+}
+
+.footerBox{
+    width: 100vw;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(17, 81%, 17%);
+    min-height: 30px;
+    margin-top: 10px;
+}
+
+.contentBox{
+    width: 80%;
+    margin: auto;
+    padding: 2.5rem;
+    /* border:1px solid #FBAB7E;
+    border-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); */
+    border-radius: 10px;
+    color: #FBAB7E;
+    box-shadow: 1px 1px 30px #FBAB7E;
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rightBox{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.rightBox img{
+    height: 300px;
+    border-radius: 10px;
+    transition: all;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+}
+
+.rightBox:hover{
+    transform: scale(1.1);
+}
+
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.leftBox h2{
+    font-size: 1.7rem;
+}
+
+.ingredientBox{
+    font-size: 0.95rem;
+}
+
+.recipeBox{
+    font-size: 0.95rem;
+}
+
+.rightBox .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(17, 81%, 17%, 0.623);
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.7rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+    
+}
+
+.rightBox:hover .overlay{
+    opacity: 1;
+}

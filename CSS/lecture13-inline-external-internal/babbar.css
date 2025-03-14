@@ -1,0 +1,12 @@
+h1{
+    font-size: smaller;
+    text-align: center;
+}
+
+p{
+    background-color: aquamarine; 
+}
+
+/*
+adding !important will overwrite inline and internal
+*/
