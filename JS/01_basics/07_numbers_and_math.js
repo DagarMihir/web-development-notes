@@ -36,9 +36,9 @@ const hundreds = 1000000;
 //console.log(Math.max(4, 3, 6, 8)); // 8
 
 
-//console.log(Math.random()); // a random value in range 0-1, both inclusive
-//console.log((Math.random()*10) + 1); // min value 1
-//console.log(Math.floor(Math.random()*10) + 1); // single number between 1 - 9
+//console.log(Math.random()); // a random value in range [0,1)
+console.log((Math.random()*10) + 1); // min value 1
+console.log(Math.floor(Math.random()*10) + 1); // single number between 1 - 9
 
 const min = 10
 const max = 20
