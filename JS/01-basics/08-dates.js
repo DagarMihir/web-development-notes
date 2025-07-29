@@ -42,11 +42,11 @@ console.log(newDate.getMonth() + 1);
 //`${newDate.getDate()} and the time is ....`
 
 newDate.toLocaleString("default", {
-	weekday: "long", // properties
+  weekday: "long", // properties
 }); // default - internationalization
 
 console.log(
-	newDate.toLocaleString("default", {
-		weekday: "long",
-	}),
+  newDate.toLocaleString("default", {
+    weekday: "long",
+  })
 ); // Monday
